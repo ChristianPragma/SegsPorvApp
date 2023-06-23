@@ -1,0 +1,42 @@
+.wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.circle1, .circle2, .circle3, .circle4 {
+  animation: circles-fade 1.5s infinite;
+  animation-direction: alternate;
+  /* anination-timing-function: ease-in-out; */
+  transform-origin: center;
+}
+
+.circle4 {
+  animation-delay: 0;
+}
+.circle3 {
+  animation-delay: .25s;
+}
+.circle2 {
+  animation-delay: .5s;
+}
+.circle1 {
+  animation-delay: .75s;
+}
+
+.svglogo {
+  cursor: pointer;
+  z-index: 999;
+}
+
+@keyframes circles-fade {
+  0% {
+    transform: scale(.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
